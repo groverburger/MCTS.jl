@@ -43,6 +43,9 @@ export
     ExceptionRethrow,
     ReportWhenUsed
 
+export
+    create_ascii_tree
+
 abstract type AbstractMCTSPlanner{P<:Union{MDP,POMDP}} <: Policy end
 abstract type AbstractMCTSSolver <: Solver end
 abstract type AbstractStateNode end
@@ -58,5 +61,6 @@ include("default_action.jl")
 include("belief_mcts.jl")
 
 include("visualization.jl")
+include("ascii_visualization.jl")
 
 end # module

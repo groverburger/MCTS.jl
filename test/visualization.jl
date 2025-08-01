@@ -17,6 +17,8 @@ show(io, MIME("text/plain"), tree)
 take!(io)
 show(io, MIME("text/html"), tree)
 
+println(create_ascii_tree(policy.tree))
+
 # dpw
 solver = DPWSolver(n_iterations=n_iter, depth=depth, exploration_constant=ec, rng=MersenneTwister(13), tree_in_info=true)
 mdp = SimpleGridWorld()
